@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f4f0e8,
+            #e9e2d6
+        );
+
+    color: #24231f;
+
+    min-height: 100vh;
+}
+
+
+.app {
+    width: 100%;
+    max-width: 500px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding-bottom: 90px;
+}
+
+
+/* SAYFALAR */
+
+.page {
+    display: none;
+
+    padding: 25px 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-title {
+    display: block;
+
+    font-size: 13px;
+
+    color: #8a867e;
+
+    margin-bottom: 5px;
+}
+
+.header h1 {
+    font-size: 22px;
+}
+
+
+.location-button {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* SAAT */
+
+.clock-section {
+    text-align: center;
+
+    margin-top: 45px;
+}
+
+.clock-section p {
+    color: #88837b;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+#clock {
+    font-size: 48px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* SIRADAKİ NAMAZ */
+
+.next-prayer {
+    margin-top: 35px;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background: #2e302b;
+
+    color: white;
+
+    text-align: center;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.next-prayer .small-title {
+    color: #aaa9a3;
+}
+
+.next-prayer h2 {
+    font-size: 28px;
+
+    margin: 5px 0;
+}
+
+#nextPrayerTime {
+    font-size: 17px;
+
+    color: #c8c4bb;
+}
+
+
+.remaining {
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.remaining span {
+    display: block;
+
+    font-size: 12px;
+
+    color: #aaa9a3;
+}
+
+.remaining strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 25px;
+}
+
+
+/* NAMAZ */
+
+.prayer-section {
+    margin-top: 35px;
+}
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: 20px;
+}
+
+
+.prayer-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.prayer-card {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px;
+
+    background: rgba(255,255,255,0.75);
+
+    border-radius: 18px;
+
+    transition: 0.2s;
+}
+
+.prayer-card.next {
+    border: 2px solid #44463f;
+
+    background: #fff;
+}
+
+.prayer-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.prayer-icon {
+    font-size: 20px;
+}
+
+.prayer-name {
+    font-size: 15px;
+}
+
+.prayer-time {
+    font-weight: 600;
+
+    font-size: 16px;
+}
+
+
+.loading {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #888;
+}
+
+
+/* ZİKİRMATİK */
+
+.zikirmatik-header {
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+.zikirmatik-header h1 {
+    font-size: 26px;
+}
+
+
+.counter-section {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 70px;
+}
+
+
+#counter {
+    font-size: 80px;
+
+    font-weight: 600;
+
+    margin-bottom: 40px;
+}
+
+
+.counter-button {
+    width: 210px;
+    height: 210px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #2e302b;
+
+    color: white;
+
+    font-size: 80px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+    cursor: pointer;
+
+    transition: transform 0.1s;
+}
+
+.counter-button:active {
+    transform: scale(0.94);
+}
+
+
+.reset-button {
+    margin-top: 30px;
+
+    padding: 13px 30px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    color: #333;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+
+/* ALT NAV */
+
+.bottom-nav {
+    position: fixed;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: 75px;
+
+    background: rgba(255,255,255,0.92);
+
+    backdrop-filter: blur(15px);
+
+    border-top: 1px solid rgba(0,0,0,0.05);
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    z-index: 100;
+}
+
+
+.nav-button {
+    border: none;
+
+    background: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #999;
+
+    cursor: pointer;
+}
+
+.nav-button span {
+    font-size: 22px;
+}
+
+.nav-button small {
+    font-size: 11px;
+}
+
+.nav-button.active {
+    color: #2e302b;
+
+    font-weight: 600;
+}
+
+
+/* MOBİL */
+
+@media (max-width: 400px) {
+
+    #clock {
+        font-size: 40px;
+    }
+
+    .counter-button {
+        width: 180px;
+        height: 180px;
+    }
+
+    #counter {
+        font-size: 65px;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vakit</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ANA SAYFA -->
+        <main id="homePage" class="page active">
+
+            <header class="header">
+                <div>
+                    <span class="small-title">Konumunuz</span>
+                    <h1 id="locationText">Konum alınıyor...</h1>
+                </div>
+
+                <button id="locationButton" class="location-button">
+                    📍
+                </button>
+            </header>
+
+
+            <!-- SAAT -->
+            <section class="clock-section">
+
+                <p id="dateText">25 Ağustos 2026</p>
+
+                <div id="clock">
+                    00:00:00
+                </div>
+
+            </section>
+
+
+            <!-- SIRADAKİ NAMAZ -->
+            <section class="next-prayer">
+
+                <span class="small-title">
+                    Sıradaki Namaz
+                </span>
+
+                <h2 id="nextPrayerName">
+                    Yükleniyor...
+                </h2>
+
+                <div id="nextPrayerTime">
+                    --:--
+                </div>
+
+                <div class="remaining">
+                    <span>Kalan süre</span>
+                    <strong id="remainingTime">
+                        --:--:--
+                    </strong>
+                </div>
+
+            </section>
+
+
+            <!-- NAMAZ VAKİTLERİ -->
+            <section class="prayer-section">
+
+                <div class="section-title">
+                    <h2>Namaz Vakitleri</h2>
+                </div>
+
+                <div id="prayerList" class="prayer-list">
+
+                    <div class="loading">
+                        Namaz vakitleri yükleniyor...
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- ZİKİRMATİK -->
+        <main id="zikirmatikPage" class="page">
+
+            <header class="zikirmatik-header">
+                <span class="small-title">
+                    Zikirmatik
+                </span>
+
+                <h1>📿 Zikir Sayacı</h1>
+            </header>
+
+
+            <section class="counter-section">
+
+                <div id="counter">
+                    0
+                </div>
+
+                <button id="counterButton" class="counter-button">
+                    +
+                </button>
+
+                <button id="resetButton" class="reset-button">
+                    Sıfırla
+                </button>
+
+            </section>
+
+        </main>
+
+
+        <!-- ALT MENÜ -->
+        <nav class="bottom-nav">
+
+            <button class="nav-button active" data-page="homePage">
+
+                <span>🕌</span>
+                <small>Vakitler</small>
+
+            </button>
+
+
+            <button class="nav-button" data-page="zikirmatikPage">
+
+                <span>📿</span>
+                <small>Zikirmatik</small>
+
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
